@@ -1,0 +1,16 @@
+<head>
+  <title>Meteor App</title>
+</head>
+
+<body>
+  <h1>preuve de concept pipeline sms</h1>
+  {{> smsInbox }}
+</body>
+
+<template name="smsInbox">
+  <ul>
+    {{#each messages}}
+    <li><strong>{{from}}</strong>: {{body}} <em>({{timeAgo receivedAt}})</em></li>
+    {{/each}}
+  </ul>
+</template>
