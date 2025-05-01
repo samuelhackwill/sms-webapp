@@ -10,7 +10,11 @@
 <template name="smsInbox">
   <ul>
     {{#each messages}}
-    <li><strong>{{from}}</strong>: {{body}} <em>({{timeAgo receivedAt}})</em></li>
+    <li>
+      {{fromSafe}}:
+      <strong>{{body}}</strong>
+      <em>({{timeAgo receivedAt}})</em>
+    </li>
     {{/each}}
   </ul>
 </template>
